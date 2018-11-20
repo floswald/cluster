@@ -87,6 +87,12 @@ blockquote {
   h1 { font-size: $font-size-impact; }
 }
 
+.whitey {
+  a, a:visited, a:hover, a:active { color: $text-light; };
+  &, h1, h2 { color: $text-light; }
+}
+
+
 .full {
   &, h1, h2 { color: $text-light; }
   &iframe {

@@ -17,12 +17,26 @@ class: impact
 
 ---
 
-class: impact
+background-image: url(follow_me_01.jpg)
+class: whitey
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 
 # Follow me 
-## [https://floswald.github.io/miscellany/](https://floswald.github.io/miscellany/)
+[https://floswald.github.io/miscellany/](https://floswald.github.io/miscellany/) 
 
 All materials are available on [github](https://github.com/floswald/cluster).
+
 
 ---
 
@@ -179,6 +193,16 @@ ip-172-31-9-128         lx-amd64        1    1    1    1  0.05  985.8M  200.5M  
 
 ---
 
+## Connecting
+
+* If you sent me your key, you can do
+    ```
+    ssh ec2-user@52.47.129.72
+    ```
+* Notice that you are *me* here. A proper setup with usernames is possible.
+
+---
+
 ## `hello_world_mpi.c`
 
 * This is straight out of a [cfncluster tutorial](https://aws.amazon.com/getting-started/projects/deploy-elastic-hpc-cluster/)
@@ -311,4 +335,24 @@ julia> @time parallel(64);
 ## Autoscaling Live
 
 * Let's go wild and max out the cluster (max size is 10 nodes)
-* All who are logged in run the last part of `script.jl`
+* All who are logged in run the last part of [`script.jl`](https://github.com/floswald/cluster/blob/master/script.jl)
+* (Just realized that this does not affect `SGE` queue length. d'oh!)
+
+---
+
+# Shutting Down
+
+* Very important!!
+* on your laptop:
+    ```
+    cfncluster stop paris
+    ```
+* Then go to AWS console and *manually* turn off master node.
+
+---
+
+class: impact
+
+# END
+## See you in the cloud.
+
